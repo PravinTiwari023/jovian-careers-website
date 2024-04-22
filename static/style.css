@@ -16,6 +16,7 @@ h1 {
     width: 100%;
     height: 280px;
     object-fit: cover;
+    margin-bottom: 16px;
 }
 
 .sub-headers {
@@ -29,6 +30,12 @@ h1 {
     width: 80%;
     margin: 0px auto;
     text-align: center;
+    margin: 16px auto;
+}
+
+#team {
+    height: 200px;
+    border-radius: 5px;
 }
 
 #job-opening {
