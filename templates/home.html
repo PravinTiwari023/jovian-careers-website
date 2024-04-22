@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="static/style.css">
 </head>
 <body>
-    <h1>Jovian Careers</h1>
+    {% include 'nav.html' %}
     <img id="banner" src="/static/banner.jpg" alt="banner">
     <h2 class="sub-headers">About Jovian</h2>
     <div id="about-section" class="row">
@@ -34,8 +34,7 @@
         </div>
     </div>
     <div id="footer">
-        <button type="button" class="btn btn-secondary btn-sm">Contact Us</button>
-        <p>© 2024,Jovian</p>
+        {% include 'footer.html' %}
     </div>
 </body>
 </html>
