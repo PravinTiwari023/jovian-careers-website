@@ -1,7 +1,12 @@
 from sqlalchemy import create_engine, text
+from dotenv import load_dotenv
+import os
 
-# Define the PostgreSQL connection string
-pgsql_data = "postgresql://joviancareers_zmpb_user:fdliuVsnjQ7kn82aa2Juuq9vU6d6k57J@dpg-coj8ufol6cac739t4gpg-a.oregon-postgres.render.com:5432/joviancareers_zmpb"
+load_dotenv()
+
+# Check if the environment variable is set
+# Get the value of the environment variable
+pgsql_data = os.getenv('DB_CONNECTION_STRING')
 
 # Create the SQLAlchemy engine
 engine = create_engine(pgsql_data)
