@@ -19,6 +19,13 @@ h1 {
     margin-bottom: 16px;
 }
 
+#banner-1 {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    margin-bottom: 16px;
+}
+
 .sub-headers {
     font-size: 28px;
     color: #4f46e5;
