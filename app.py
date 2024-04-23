@@ -1,5 +1,5 @@
 from flask import Flask, render_template, jsonify
-from database import load_jobs_from_db
+from database import load_jobs_from_db, load_job_from_id
 
 app = Flask(__name__)
 
@@ -20,6 +20,16 @@ def list_jobs():
 
     # Return the loaded jobs as a JSON response
     return jsonify(JOBS)
+
+@app.route("/job/<id>")
+def show_job(id):
+    # Handle the "/jobs/<id>" route and render the "job.html" template with the job data.
+    # Load the jobs from the database using the load_jobs_from_db() function
+    JOB = load_job_from_id(id)
+
+    if not JOB:
+        return "Job is not listed", 404
+    return render_template("jobpage.html", job=JOB[0])
 
 
 if __name__ == "__main__":
