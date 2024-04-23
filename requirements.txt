@@ -3,4 +3,4 @@ gunicorn
 sqlalchemy
 psycopg2
 psycopg2-binary
-dotenv
+python-dotenv
