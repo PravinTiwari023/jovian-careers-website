@@ -14,13 +14,27 @@
 <body>
     {% include 'nav.html' %}
      <img id="banner-1" src="/static/banner_1.jpg" alt="banner">
-    <div class=".container text-center">
-        <h3>{{ job['title'] }}</h3>
-        <h5>{{ job['location'] }}</h5>
-        <h5>{{ job['salary'] }}</h5>
+    <div class=".container" style="margin-left: 20px">
+        <h3 style="font-weight: bold">{{ job['title'] }}</h3>
+        <h5>Location: {{ job['location'] }}</h5>
+        <h5>Salary: {{ job['salary'] }}</h5>
     </div>
-        <p style="margin-left: 20px">{{ job['description'] }}></p>
-        <p style="margin-left: 20px">{{ job['qualifications'] }}</p>
+    <div style="margin-left: 20px">
+        <h3 style="font-weight: 600">Job Description</h3>
+        <ul>
+            {% for desc in job['description'].split('\n') %}
+            <li style="margin-left: 20px">{{ desc }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div style="margin-left: 20px">
+        <h3 style="font-weight: 600">Qualifications</h3>
+        <ol>
+            {% for item in job['qualifications'].split('\n') %}
+            <li style="margin-left: 20px">{{ item }}</li>
+            {% endfor %}
+        </ol>
+    </div>
     {% include 'footer.html' %}
 </body>
 </html>
