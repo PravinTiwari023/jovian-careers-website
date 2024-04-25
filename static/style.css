@@ -71,6 +71,45 @@ h1 {
     margin-bottom: 2px;
 }
 
+#application {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 8px;
+}
+
+.form-group {
+    margin: 14px;
+}
+
+#application-form label {
+    font-weight: 600;
+}
+
+#application-form input, select, textarea {
+    font-family: "Rajdhani";
+    font-weight: 500;
+    font-size: 18px;
+    padding: 4px;
+    margin-top: 4px;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+.form-group textarea {
+    width: 100%;
+}
+
+#application-form input[type="submit"] {
+    background-color: #2563EB;
+    width: 120px;
+    min-width: 0;
+    padding: 6px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.25rem;
+    cursor: pointer;
+  }
+
 #footer {
     margin-top: 28px;
     padding-top: 12px;
